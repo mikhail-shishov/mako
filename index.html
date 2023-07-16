@@ -24,6 +24,13 @@
               <li class="nav__list--item"><a href="">Полезно знать</a></li>
             </ul>
           </nav>
+          <div class="aside__tel">
+            <img src="img/icons/phone.svg" class="aside__tel--icon" alt="" />
+            <div class="aside__tel--right">
+              <a href="tel:7757" class="aside__tel--number">7757</a>
+              <span class="aside__tel--operator">(А1, МТС)</span>
+            </div>
+          </div>
         </div>
       </aside>
       <div class="content">
@@ -133,19 +140,31 @@
           </section>
           <section class="call__section">
             <div class="call__box">
-              <h2 class="h2">Хотите, мы вам перезвоним?</h2>
-              <p class="text">Оставьте заявку и мы подробно ответим на все Ваши вопросы!</p>
+              <div class="call__textbox">
+                <h2 class="h2">Хотите, мы вам перезвоним?</h2>
+                <p class="text">Оставьте заявку и мы подробно ответим на все Ваши вопросы!</p>
+              </div>
               <form action="" class="form">
-                <label class="form__label">
+                <div class="form__row">
+                  <label class="form__label">
                     <span class="form__label--name">Имя</span>
-                    <input type="text" class="form__label--input" placeholder="Введите имя">
-                </label>
-                <label class="form__label">
-                    <span class="form__label--name">Телефон<span class="form__label--required">*</span></span>
-                    <input type="text" class="form__label--input"  placeholder="Введите телефон">
-                </label>
-                <input type="submit" class="button" value="Заказать звонок">
+                    <input type="text" class="form__label--input" placeholder="Введите имя" />
+                  </label>
+                  <label class="form__label">
+                    <span class="form__label--name">
+                      Телефон
+                      <span class="form__label--required">*</span>
+                    </span>
+                    <input type="text" class="form__label--input" placeholder="Введите телефон" />
+                  </label>
+                  <input type="submit" class="button" value="Заказать звонок" />
+                </div>
+                <p class="form__confirm">
+                  Нажимая на кнопку, вы даете согласие на
+                  <a href="">обработку своих персональных данных</a>
+                </p>
               </form>
+              <img src="img/call-back.png" class="call__img" alt="" />
             </div>
           </section>
         </main>
