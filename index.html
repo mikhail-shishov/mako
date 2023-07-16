@@ -3,39 +3,183 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
     <link rel="stylesheet" href="css/style.min.css" />
     <title>МАКО - Наши врачи</title>
   </head>
   <body>
     <div class="wrapper">
       <aside class="aside">
-        <a href="/" class="logo">
-          <img src="img/logo.svg" width="134" height="134" alt="Лого" />
-        </a>
-        <nav class="nav">
+        <div class="aside__float">
+          <a href="/" class="logo">
+            <img src="img/logo.svg" width="134" height="134" alt="Лого" />
+          </a>
+          <nav class="nav">
             <ul class="nav__list">
-                <li class="nav__list--item"><a href="">О центре</a></li>
-                <li class="nav__list--item"><a href="">Услуги и цены</a></li>
-                <li class="nav__list--item"><a href="">Отзывы</a></li>
-                <li class="nav__list--item"><a href="">Контакты</a></li>
-                <li class="nav__list--item"><a href="">Акции</a></li>
-                <li class="nav__list--item"><a href="">Полезно знать</a></li>
+              <li class="nav__list--item"><a href="">О центре</a></li>
+              <li class="nav__list--item"><a href="">Услуги и цены</a></li>
+              <li class="nav__list--item"><a href="">Отзывы</a></li>
+              <li class="nav__list--item"><a href="">Контакты</a></li>
+              <li class="nav__list--item"><a href="">Акции</a></li>
+              <li class="nav__list--item"><a href="">Полезно знать</a></li>
             </ul>
-        </nav>
+          </nav>
+        </div>
       </aside>
-      <main class="main">
+      <div class="content">
+        <main class="main">
+          <div class="main__top">
+            <div class="main__top--item">
+              <img src="img/icons/location.svg" width="24" height="24" alt="" />
+              <span>г. Борисов, ул. Ленина, д.147</span>
+            </div>
+            <div class="main__top--item">
+              <img src="img/icons/time.svg" width="24" height="24" alt="" />
+              <span>Сегодня: 10:00 - 19:00</span>
+            </div>
+            <div class="main__top--item">
+              <img src="img/icons/a1.svg" width="20" height="22" alt="" />
+              <a href="tel:+375445558086">+375 (44) 555-80-86</a>
+            </div>
+            <div class="main__top--item">
+              <img src="img/icons/mts.svg" width="22" height="22" alt="" />
+              <a href="tel:+375445558083">+375 (44) 555-80-83</a>
+            </div>
+          </div>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="">Медцентр МАКО</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span>Врачи</span>
+            </li>
+          </ul>
+          <section class="doctor-list__section">
+            <h1 class="h1">Наши врачи</h1>
+            <div class="doctor-list__grid">
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">12</span>
+                <img src="img/doctor/fedorovic.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Федорович</span>
+                  <span class="doctor-list__name">Александр Константинович</span>
+                  <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                </span>
+              </a>
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">12</span>
+                <img src="img/doctor/prichodko.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Приходько</span>
+                  <span class="doctor-list__name">Любовь Григорьевна</span>
+                  <span class="doctor-list__role">врач-нефролог</span>
+                </span>
+              </a>
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">35</span>
+                <img src="img/doctor/kostyuchenko.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Костюченко</span>
+                  <span class="doctor-list__name">Валентина Максимовна</span>
+                  <span class="doctor-list__role">врач-офтальмолог</span>
+                </span>
+              </a>
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">12</span>
+                <img src="img/doctor/ivanova.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Иванова</span>
+                  <span class="doctor-list__name">Мария Алексеевна</span>
+                  <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                </span>
+              </a>
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">35</span>
+                <img src="img/doctor/kotchenko.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Котченко</span>
+                  <span class="doctor-list__name">Наталья Олеговна</span>
+                  <span class="doctor-list__role">врач-нефролог</span>
+                </span>
+              </a>
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">12</span>
+                <img src="img/doctor/spak.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Шпак</span>
+                  <span class="doctor-list__name">Иван Васильевич</span>
+                  <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                </span>
+              </a>
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">12</span>
+                <img src="img/doctor/mrachnova.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Мрачнова</span>
+                  <span class="doctor-list__name">Марина Игнатовна</span>
+                  <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                </span>
+              </a>
+              <a href="" class="doctor-list__card">
+                <span class="doctor-list__heart">35</span>
+                <img src="img/doctor/chudakovic.png" class="doctor-list__img" alt="" />
+                <span class="doctor-list__data">
+                  <span class="doctor-list__surname">Чудакович</span>
+                  <span class="doctor-list__name">Игорь Станиславович</span>
+                  <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                </span>
+              </a>
+            </div>
+          </section>
+          <section class="call__section">
+            <div class="call__box">
+              <h2 class="h2">Хотите, мы вам перезвоним?</h2>
+              <p class="text">Оставьте заявку и мы подробно ответим на все Ваши вопросы!</p>
+              <form action="" class="form">
+                <label class="form__label">
+                    <span class="form__label--name">Имя</span>
+                    <input type="text" class="form__label--input" placeholder="Введите имя">
+                </label>
+                <label class="form__label">
+                    <span class="form__label--name">Телефон<span class="form__label--required">*</span></span>
+                    <input type="text" class="form__label--input"  placeholder="Введите телефон">
+                </label>
+                <input type="submit" class="button" value="Заказать звонок">
+              </form>
+            </div>
+          </section>
+        </main>
         <footer class="footer">
           <div class="container">
-            <p>© Все права защищены, 2023. ООО “Медицинский центр МАКО”</p>
-            <p>Лицензия 85002/6647</p>
-            <p><a href="">Политика конфиденциальности</a></p>
-            <p>
-              Для юридических обращений:
-              <a href="mailto:jur@smclinic‑spb.ru">jur@smclinic‑spb.ru</a>
-            </p>
+            <div class="footer__row">
+              <p class="footer__point">
+                © Все права защищены, 2023.
+                <br />
+                ООО “Медицинский центр МАКО”
+              </p>
+              <p class="footer__point">Лицензия 85002/6647</p>
+              <p class="footer__point"><a href="">Политика конфиденциальности</a></p>
+              <p class="footer__point">
+                Для юридических обращений:
+                <a href="mailto:jur@smclinic‑spb.ru">jur@smclinic‑spb.ru</a>
+              </p>
+            </div>
+            <div class="footer__row">
+              <div class="footer__social">
+                <a href="" class="footer__social--link"><img src="img/icons/social/vk.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/fb.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/instagram.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/twitter.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/youtube.svg" alt="" /></a>
+              </div>
+              <p class="footer__text">
+                Информация, предоставленная на сайте носит ознакомительный характер и не является публичной офертой. До
+                проведения процедур необходима консультация врача.
+              </p>
+            </div>
           </div>
         </footer>
-      </main>
+      </div>
     </div>
   </body>
 </html>

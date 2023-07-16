@@ -1,0 +1,50 @@
+.footer {
+    margin-top: auto;
+    background-color: $lightgrey1;
+    padding: 75px 90px 60px;
+    &__row {
+        display: flex;
+    }
+    &__point {
+        color: $black;
+        font-size: 16px;
+        margin-right: 47px;
+
+        a {
+            color: $black;
+        }
+
+        &:first-of-type {
+            min-width: 268px;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+            margin-left: auto;
+
+            a {
+                text-decoration-color: $green;
+            }
+        }
+    }
+    &__text {
+        color: $lightgrey2;
+        font-size: 14px;
+    }
+    &__social {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-right: 75px;
+
+        &--link {
+            background-color: $lightgreen;
+            border-radius: 50px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

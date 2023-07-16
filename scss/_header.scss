@@ -1,0 +1,33 @@
+.aside {
+  border-right: 1px solid $lightgrey1;
+  min-height: 100vh;
+  position: relative;
+
+  &__float {
+    position: sticky;
+    top: 0;
+  }
+}
+
+.nav {
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 70px 0 170px;
+
+    &--item {
+      margin-bottom: 56px;
+
+      @media (max-width: 1680px) {
+        margin-bottom: 30px;
+      }
+
+      a {
+        color: $black;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+  }
+}
