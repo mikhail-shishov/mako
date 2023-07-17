@@ -1,48 +1,29 @@
-.aside {
-    min-width: 330px;
-    padding: 38px 60px 38px 105px;
-
-    &__tel {
-        display: flex;
-        align-items: flex-start;
-        gap: 5px;
-        &--right {
-            display: flex;
-            flex-direction: column;
-        }
-        &--icon {
-            border: 1px solid $lightgrey6;
-            padding: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50px;
-        }
-        &--number {
-            color: $red;
-            font-size: 48px;
-            font-weight: 700;
-            text-decoration: none;
-            line-height: 1.15;
-        }
-        &--operator {
-            color: $lightgrey5;
-            font-weight: 700;
-        }
-    }
-}
-
 .main {
   padding: 0 120px 0 45px;
+
+  @media (max-width: 1280px) {
+    padding: 0 40px;
+  }
+
   &__top {
     display: flex;
     gap: 40px;
     margin: 36px 0 66px;
 
+    @media (max-width: 1440px) {
+      gap: 25px;
+    }
+
     &--item {
       display: flex;
       align-items: center;
       gap: 6px;
+
+      &-img {
+        @media (max-width: 1280px) {
+          max-height: 20px;
+        }
+      }
 
       span,
       a {
@@ -50,6 +31,14 @@
         font-size: 16px;
         text-decoration: none;
         transition: opacity 0.3s;
+
+        @media (max-width: 1280px) {
+          font-size: 13px;
+        }
+
+        @media (max-width: 1024px) {
+          font-size: 12px;
+        }
       }
 
       a {
@@ -101,6 +90,22 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 60px 20px;
+
+      @media (max-width: 1440px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 1280px) {
+        gap: 20px;
+      }
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
     }
     &__card {
       border-radius: 16px;
@@ -113,6 +118,12 @@
       display: flex;
       flex-direction: column;
       overflow: hidden;
+
+      &:hover {
+        .doctor-list__img {
+            min-height: 105%;
+        }
+      }
 
       &:before {
         content: '';
@@ -153,6 +164,8 @@
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      min-height: 100%;
+      transition: min-height .3s;
     }
     &__heart {
       background-image: url(../img/icons/heart.svg);
@@ -202,6 +215,11 @@
     bottom: 0;
     right: 120px;
     z-index: 1;
+    max-height: 450px;
+
+    @media (max-width: 1440px) {
+        right: 40px;
+    }
   }
 }
 
@@ -209,11 +227,19 @@
   margin: 55px 0 0;
   display: flex;
   flex-direction: column;
+  @media (max-width: 1280px) {
+    margin: 35px 0 0;
+  }
   &__row {
     gap: 20px;
     display: flex;
     align-items: flex-end;
     margin-bottom: 20px;
+
+    @media (max-width: 1280px) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
   }
   &__label {
     display: flex;
@@ -238,8 +264,11 @@
     font-size: 14px;
     color: $black;
     a {
-        color: $black;
-        text-decoration-color: $red;
+      color: $black;
+      text-decoration-color: $red;
+    }
+    @media (max-width: 1280px) {
+        max-width: 320px;
     }
   }
 }

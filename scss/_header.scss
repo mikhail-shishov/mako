@@ -2,18 +2,70 @@
   border-right: 1px solid $lightgrey1;
   min-height: 100vh;
   position: relative;
+  min-width: 330px;
+  padding: 40px 60px 40px 105px;
+
+  @media (max-width: 1440px) {
+    min-width: 220px;
+    padding: 40px;
+  }
 
   &__float {
     position: sticky;
-    top: 0;
+    top: 40px;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
   }
+
+  &__tel {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    margin-top: auto;
+    &--right {
+      display: flex;
+      flex-direction: column;
+    }
+    &--icon {
+      border: 1px solid $lightgrey6;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50px;
+    }
+    &--number {
+      color: $red;
+      font-size: 48px;
+      font-weight: 700;
+      text-decoration: none;
+      line-height: 1.15;
+
+      @media (max-width: 1440px) {
+        font-size: 40px;
+      }
+    }
+    &--operator {
+      color: $lightgrey5;
+      font-weight: 700;
+    }
+  }
+}
+
+.logo {
+    img {
+        @media (max-width: 1440px) {
+            width: 120px;
+        }
+    }
 }
 
 .nav {
   &__list {
     list-style: none;
     padding: 0;
-    margin: 70px 0 170px;
+    margin: 70px 0;
 
     &--item {
       margin-bottom: 56px;
@@ -27,7 +79,20 @@
         text-decoration: none;
         font-weight: 600;
         font-size: 20px;
+        transition: color .3s;
+
+        @media (max-width: 1440px) {
+          font-size: 18px;
+        }
+
+        &:hover {
+            color: lighten($black, 10%);
+        }
       }
+    }
+
+    @media (max-width: 1440px) {
+        margin: 40px 0;
     }
   }
 }
