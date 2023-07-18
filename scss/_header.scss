@@ -10,6 +10,15 @@
     padding: 40px;
   }
 
+  @media (max-width: 1024px) {
+    min-width: 200px;
+    padding: 30px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   &__float {
     position: sticky;
     top: 40px;

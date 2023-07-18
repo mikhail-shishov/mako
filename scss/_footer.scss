@@ -20,6 +20,10 @@
       margin: 0 0 12px;
     }
 
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+
     a {
       color: $black;
     }
