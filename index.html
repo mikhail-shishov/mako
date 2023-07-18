@@ -16,10 +16,22 @@
           </a>
           <nav class="nav">
             <ul class="nav__list">
-              <li class="nav__list--item"><a href="">О центре</a></li>
-              <li class="nav__list--item"><a href="">Услуги и цены</a></li>
-              <li class="nav__list--item"><a href="">Отзывы</a></li>
-              <li class="nav__list--item"><a href="">Контакты</a></li>
+              <li class="nav__list--item">
+                <button class="dropdown__button">О центре</button>
+                <div class="nav__list--dropdown">
+                  <a href="">О нас</a>
+                  <a href="">История</a>
+                </div>
+              </li>
+              <li class="nav__list--item">
+                <button class="dropdown__button">Услуги и цены</button>
+                <div class="nav__list--dropdown">
+                  <a href="">Услуга 1</a>
+                  <a href="">История</a>
+                </div>
+              </li>
+              <li class="nav__list--item"><a href="review.html">Отзывы</a></li>
+              <li class="nav__list--item"><a href="contact.html">Контакты</a></li>
               <li class="nav__list--item"><a href="">Акции</a></li>
               <li class="nav__list--item"><a href="">Полезно знать</a></li>
             </ul>
@@ -37,7 +49,7 @@
         <main class="main">
           <div class="main__top">
             <div class="main__top--item">
-              <img src="img/icons/location.svg"  class="main__top--item-img" width="24" height="24" alt="" />
+              <img src="img/icons/location.svg" class="main__top--item-img" width="24" height="24" alt="" />
               <span>г. Борисов, ул. Ленина, д.147</span>
             </div>
             <div class="main__top--item">
@@ -200,5 +212,6 @@
         </footer>
       </div>
     </div>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
