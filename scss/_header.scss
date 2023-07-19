@@ -63,11 +63,11 @@
 }
 
 .logo {
-    img {
-        @media (max-width: 1440px) {
-            width: 120px;
-        }
+  img {
+    @media (max-width: 1440px) {
+      width: 120px;
     }
+  }
 }
 
 .nav {
@@ -83,12 +83,13 @@
         margin-bottom: 30px;
       }
 
-      a, button {
+      a,
+      button {
         color: $black;
         text-decoration: none;
         font-weight: 600;
         font-size: 20px;
-        transition: color .3s;
+        transition: color 0.3s;
         background-color: transparent;
         border: 0;
         text-align: left;
@@ -100,52 +101,52 @@
         }
 
         &:hover {
-            color: lighten($black, 10%);
+          color: lighten($black, 10%);
         }
       }
 
       .dropdown {
         &__button {
-            position: relative;
+          position: relative;
+          &:before {
+            content: '';
+            background-image: url(../img/icons/arrow-right.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 11px;
+            display: inline-block;
+            position: absolute;
+            right: -14px;
+            top: 8px;
+            transition: transform 0.3s;
+          }
+          &.is-active {
             &:before {
-                content: "";
-                background-image: url(../img/icons/arrow-right.svg);
-                background-size: contain;
-                background-repeat: no-repeat;
-                width: 7px;
-                height: 11px;
-                display: inline-block;
-                position: absolute;
-                right: -14px;
-                top: 8px;
-                transition: transform .3s;
+              transform: rotate(90deg);
             }
-            &.is-active {
-                &:before {
-                    transform: rotate(90deg);
-                }
-                + .nav__list--dropdown {
-                    display: flex;
-                    flex-direction: column;
-                    margin: 20px 0 0 10px;
-                    gap: 10px;
-    
-                    a {
-                        font-weight: 400;
-                        font-size: 14px;
-                    }
-                }
+            + .nav__list--dropdown {
+              display: flex;
+              flex-direction: column;
+              margin: 20px 0 0 10px;
+              gap: 10px;
+
+              a {
+                font-weight: 400;
+                font-size: 14px;
+              }
             }
+          }
         }
       }
     }
 
     &--dropdown {
-        display: none;
+      display: none;
     }
 
     @media (max-width: 1440px) {
-        margin: 40px 0;
+      margin: 40px 0;
     }
   }
 }

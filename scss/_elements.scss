@@ -103,6 +103,7 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 60px 20px;
+      margin-top: 60px;
 
       @media (max-width: 1440px) {
         grid-template-columns: repeat(3, 1fr);
@@ -118,6 +119,7 @@
 
       @media (max-width: 576px) {
         grid-template-columns: repeat(1, 1fr);
+        margin-top: 40px;
       }
     }
     &__card {
@@ -390,7 +392,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     @media (max-width: 992px) {
-        grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(1, 1fr);
     }
   }
   &__card {
@@ -451,12 +453,115 @@
       }
     }
     &--text {
-        font-size: 16px;
+      font-size: 16px;
+      color: $black;
+
+      p {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.service {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px 20px;
+    margin-top: 60px;
+    @media (max-width: 1440px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 1280px) {
+      gap: 20px;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (max-width: 576px) {
+      margin-top: 40px;
+    }
+  }
+  &__icon {
+    max-height: 60px;
+
+    @media (max-width: 576px) {
+      max-height: 40px;
+    }
+  }
+  &__card {
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
+    display: flex;
+    flex-direction: column;
+    &--heading {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      padding: 30px 40px;
+      border-bottom: 1px solid $lightgrey1;
+
+      @media (max-width: 576px) {
+        padding: 20px;
+      }
+
+      &-name {
+        font-weight: 700;
+        font-size: 24px;
         color: $black;
 
-        p {
-            margin-top: 0;
+        @media (max-width: 576px) {
+          font-size: 18px;
         }
+      }
+    }
+    &--body {
+      padding: 30px 40px;
+
+      @media (max-width: 576px) {
+        padding: 20px;
+      }
+    }
+    &--list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 35px;
+
+      a {
+        color: $black;
+        text-decoration-color: $red;
+        transition: color 0.3s;
+        display: none;
+
+        &:nth-child(-n + 5) {
+          display: inline-block;
+        }
+
+        &:hover {
+          color: lighten($black, 10%);
+        }
+      }
+
+      &.is-open {
+        a {
+          display: inline-block;
+        }
+        + .service__card--more {
+          display: none;
+        }
+      }
+    }
+    &--more {
+      color: $green;
+      text-decoration: none;
+      border-bottom: 1px solid dashed;
+      margin-top: auto;
+      display: inline-block;
+      transition: color .3s;
+
+      &:hover {
+        color: darken($green, 10%);
+      }
     }
   }
 }
