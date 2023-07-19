@@ -5,7 +5,7 @@ dropdownBtn.forEach((el) => {
     dropdownBtn.forEach(function (element) {
       element.classList.remove('is-active');
     });
-    el.classList.add('is-active');
+    el.classList.toggle('is-active');
   });
 });
 

@@ -8,9 +8,16 @@
     font-size: 16px;
     cursor: pointer;
     transition: background-color .3s;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 
     &:hover {
         background-color: darken($red, 10%);
+    }
+
+    @media (max-width: 1440px) {
+        padding: 18px 26px;
     }
 }
 
