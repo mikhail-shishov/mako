@@ -47,6 +47,21 @@
       </aside>
       <div class="content">
         <main class="main">
+          <!-- шапка на мобильных - сюда перекидываются блоки в скриптах -->
+          <div class="main__header">
+            <div class="main__header--top">
+              <a href="/" class="logo">
+                <img src="img/logo-mob.svg" width="124" height="45" alt="Лого" />
+              </a>
+              <div class="burger"></div>
+            </div>
+            <div class="main__header--list">
+              <div class="main__header--list-links"></div>
+              <div class="main__header--list-action"></div>
+              <div class="main__header--list-contact"></div>
+            </div>
+          </div>
+
           <div class="main__top">
             <div class="main__top--left">
               <div class="main__top--item">
@@ -67,10 +82,14 @@
               </div>
             </div>
             <div class="main__top--right">
-              <div class="search">
-                <button class="search__button search__button--top"></button>
-              </div>
-              <a href="" class="button">Записаться на прием</a>
+              <form class="search" action="">
+                <button class="search__button search__button--top" type="submit">Поиск</button>
+                <input type="text" class="search__input" placeholder="Введите ваш поисковой запрос" />
+              </form>
+              <a href="" class="button">
+                Записаться
+                <span class="desktop-only">&nbsp;на прием</span>
+              </a>
             </div>
           </div>
           <ul class="breadcrumbs">
