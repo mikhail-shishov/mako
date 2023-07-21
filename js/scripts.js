@@ -55,9 +55,7 @@ if (window.screen.width <= 1024) {
 }
 
 // бургер
-// let burgerMenu = document.querySelector(".burger__button");
-// let overlay = document.querySelector(".main-header-mobile");
-// burgerMenu.addEventListener("click", function () {
-//   overlay.classList.toggle("overlay");
-//   document.body.classList.toggle("menu-opened");
-// });
+let burger = document.querySelector(".burger");
+burger.addEventListener("click", function () {
+  document.body.classList.toggle("header__open");
+});
