@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>Акции - МАКО</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <aside class="aside">
+        <div class="aside__float">
+          <a href="/" class="logo">
+            <img src="img/logo.svg" width="134" height="134" alt="Лого" />
+          </a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li class="nav__list--item">
+                <button class="dropdown__button">О центре</button>
+                <div class="nav__list--dropdown">
+                  <a href="">О нас</a>
+                  <a href="">История</a>
+                </div>
+              </li>
+              <li class="nav__list--item">
+                <button class="dropdown__button">Услуги и цены</button>
+                <div class="nav__list--dropdown">
+                  <a href="">Услуга 1</a>
+                  <a href="">История</a>
+                </div>
+              </li>
+              <li class="nav__list--item"><a href="promo.html">Отзывы</a></li>
+              <li class="nav__list--item"><a href="contact.html">Контакты</a></li>
+              <li class="nav__list--item"><a href="">Акции</a></li>
+              <li class="nav__list--item"><a href="">Полезно знать</a></li>
+            </ul>
+          </nav>
+          <div class="aside__tel">
+            <img src="img/icons/phone.svg" class="aside__tel--icon" alt="" />
+            <div class="aside__tel--right">
+              <a href="tel:7757" class="aside__tel--number">7757</a>
+              <span class="aside__tel--operator">(А1, МТС)</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="content">
+        <main class="main">
+          <!-- шапка на мобильных - сюда перекидываются блоки в скриптах -->
+          <div class="main__header">
+            <div class="main__header--top">
+              <a href="/" class="logo">
+                <img src="img/logo-mob.svg" width="124" height="45" alt="Лого" />
+              </a>
+              <div class="burger"></div>
+            </div>
+            <div class="main__header--list">
+              <div class="main__header--list-links"></div>
+              <div class="main__header--list-action"></div>
+              <div class="main__header--list-contact"></div>
+            </div>
+          </div>
+
+          <div class="main__top">
+            <div class="main__top--left">
+              <div class="main__top--item">
+                <img src="img/icons/location.svg" class="main__top--item-img" width="24" height="24" alt="" />
+                <span>г. Борисов, ул. Ленина, д.147</span>
+              </div>
+              <div class="main__top--item">
+                <img src="img/icons/time.svg" class="main__top--item-img" width="24" height="24" alt="" />
+                <span>Сегодня: 10:00 - 19:00</span>
+              </div>
+              <div class="main__top--item">
+                <img src="img/icons/a1.svg" class="main__top--item-img" width="20" height="22" alt="" />
+                <a href="tel:+375445558086">+375 (44) 555-80-86</a>
+              </div>
+              <div class="main__top--item">
+                <img src="img/icons/mts.svg" class="main__top--item-img" width="22" height="22" alt="" />
+                <a href="tel:+375445558083">+375 (44) 555-80-83</a>
+              </div>
+            </div>
+            <div class="main__top--right">
+              <form class="search" action="">
+                <button class="search__button search__button--top" type="submit">Поиск</button>
+                <input type="text" class="search__input" placeholder="Введите ваш поисковой запрос" />
+              </form>
+              <a href="" class="button">
+                Записаться
+                <span class="desktop-only">&nbsp;на прием</span>
+              </a>
+            </div>
+          </div>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a href="">Медцентр МАКО</a>
+            </li>
+            <li class="breadcrumbs__item">
+              <span>Контакты</span>
+            </li>
+          </ul>
+
+          <section class="promo__section">
+            <h2 class="h2">Акции</h2>
+            <div class="promo__grid">
+              <div class="promo__card">
+                <div class="promo__card--top">
+                    <img src="img/promo/promo-1.jpg" class="promo__card--top-img" alt="Акция">
+                </div>
+                <div class="promo__card--body">
+                  <div class="promo__card--time"><span class="promo__card--time-badge promo__card--time-badge-current">еще идет</span><span class="promo__card--time-end">по 18 августа 2023 г.</span></div>
+                  <a href="" class="promo__card--heading">Welcome price: универсальная скидка 10% на все услуги!</a>
+                  <a href="" class="promo__card--more">Подробнее</a>
+                </div>
+              </div>
+              <div class="promo__card">
+                <div class="promo__card--top">
+                    <img src="img/promo/promo-2.jpg" class="promo__card--top-img" alt="Акция">
+                </div>
+                <div class="promo__card--body">
+                  <div class="promo__card--time"><span class="promo__card--time-badge">завершена</span></div>
+                  <a href="" class="promo__card--heading">УЗИ молочных желез со скидкой</a>
+                  <a href="" class="promo__card--more">Подробнее</a>
+                </div>
+              </div>
+              <div class="promo__card">
+                <div class="promo__card--top">
+                    <img src="img/promo/promo-3.jpg" class="promo__card--top-img" alt="Акция">
+                </div>
+                <div class="promo__card--body">
+                  <div class="promo__card--time"><span class="promo__card--time-badge">завершена</span></div>
+                  <a href="" class="promo__card--heading">Welcome price: универсальная скидка 10% на все услуги!</a>
+                  <a href="" class="promo__card--more">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="call__section">
+            <div class="call__box">
+              <div class="call__textbox">
+                <h2 class="h2">Хотите, мы вам перезвоним?</h2>
+                <p class="text">Оставьте заявку и мы подробно ответим на все Ваши вопросы!</p>
+              </div>
+              <form action="" class="form">
+                <div class="form__row">
+                  <label class="form__label">
+                    <span class="form__label--name">Имя</span>
+                    <input type="text" class="form__label--input" placeholder="Введите имя" />
+                  </label>
+                  <label class="form__label">
+                    <span class="form__label--name">
+                      Телефон
+                      <span class="form__label--required">*</span>
+                    </span>
+                    <input type="text" class="form__label--input" placeholder="Введите телефон" />
+                  </label>
+                  <input type="submit" class="button" value="Заказать звонок" />
+                </div>
+                <p class="form__confirm">
+                  Нажимая на кнопку, вы даете согласие на
+                  <a href="">обработку своих персональных данных</a>
+                </p>
+              </form>
+              <img src="img/call-back.png" class="call__img" alt="" />
+            </div>
+          </section>
+        </main>
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__row">
+              <p class="footer__point">
+                © Все права защищены, 2023.
+                <br />
+                ООО “Медицинский центр МАКО”
+              </p>
+              <p class="footer__point">Лицензия 85002/6647</p>
+              <p class="footer__point"><a href="">Политика конфиденциальности</a></p>
+              <p class="footer__point">
+                Для юридических обращений:
+                <a href="mailto:jur@smclinic‑spb.ru">jur@smclinic‑spb.ru</a>
+              </p>
+            </div>
+            <div class="footer__row">
+              <div class="footer__social">
+                <a href="" class="footer__social--link"><img src="img/icons/social/vk.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/fb.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/instagram.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/twitter.svg" alt="" /></a>
+                <a href="" class="footer__social--link"><img src="img/icons/social/youtube.svg" alt="" /></a>
+              </div>
+              <p class="footer__text">
+                Информация, предоставленная на сайте носит ознакомительный характер и не является публичной офертой. До
+                проведения процедур необходима консультация врача.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
