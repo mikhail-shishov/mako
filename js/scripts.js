@@ -21,16 +21,18 @@ serviceMore.forEach((el) => {
 // открытие поиска в шапке
 const searchBtn = document.querySelector('.search__button--top');
 const searchInput = document.querySelector('.search__input');
+const search = document.querySelector('.search');
+
 searchBtn.addEventListener('click', (e) => {
   // кнопка служит для открытия блока и дальнейшего поиска
-  if (!searchInput.classList.contains('is-active')) {
+  if (!search.classList.contains('is-active')) {
     e.preventDefault();
   }
-  searchInput.classList.add('is-active');
+  search.classList.add('is-active');
 });
 window.addEventListener('click', function (e) {
   if (!(searchInput.contains(e.target) || searchBtn.contains(e.target))) {
-    searchInput.classList.remove('is-active');
+    search.classList.remove('is-active');
   }
 });
 
