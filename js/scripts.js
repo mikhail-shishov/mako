@@ -23,6 +23,20 @@ serviceMore.forEach((el) => {
   });
 });
 
+// читать дальше
+const readMore = document.querySelectorAll('.link--readmore');
+readMore.forEach((el) => {
+  el.addEventListener('click', (e) => {
+    e.preventDefault();
+    el.previousElementSibling.classList.toggle('is-open');
+    if (el.previousElementSibling.classList.contains('is-open')) {
+      el.innerHTML = 'Свернуть описание';
+    } else {
+      el.innerHTML = 'Показать больше';
+    }
+  });
+});
+
 // открытие поиска в шапке
 const searchBtn = document.querySelector('.search__button--top');
 const searchInput = document.querySelector('.search__input');

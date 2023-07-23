@@ -560,6 +560,68 @@
       }
     }
   }
+  &-about {
+    &__section {
+      margin: 105px 0;
+
+      .link--readmore {
+        margin-top: 20px;
+      }
+    }
+    &__text {
+      *:nth-child(n + 8) {
+        display: none;
+      }
+      &.is-open {
+        * {
+          display: block;
+        }
+      }
+    }
+    &__row {
+      display: flex;
+      gap: 100px;
+
+      @media (max-width: 1440px) {
+        gap: 40px;
+      }
+
+      @media (max-width: 1280px) {
+        flex-direction: column;
+      }
+    }
+    &__service {
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
+      padding: 44px 50px;
+      min-width: 530px;
+      max-height: 540px;
+
+      &-list {
+        list-style: none;
+        padding: 0;
+        li {
+          margin: 10px 0;
+
+          a {
+            color: $black;
+            text-decoration-style: dashed;
+            text-decoration-color: $red;
+
+            @media (max-width: 576px) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      @media (max-width: 576px) {
+        min-width: 100%;
+        padding: 30px;
+      }
+    }
+  }
 }
 
 .call {
@@ -847,7 +909,7 @@
     box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
     display: flex;
     flex-direction: column;
-  
+
     &--heading {
       display: flex;
       align-items: center;
@@ -911,7 +973,7 @@
     &--more {
       color: $green;
       text-decoration: none;
-      border-bottom: 1px solid dashed;
+      border-bottom: 1px dashed $green;
       margin-top: auto;
       display: inline-block;
       transition: color 0.3s;
@@ -1215,8 +1277,8 @@
     }
   }
   &__col {
-      width: 65%;
-      max-width: 1000px;
+    width: 65%;
+    max-width: 1000px;
 
     @media (max-width: 1440px) {
       width: 75%;
@@ -1229,7 +1291,7 @@
   &__card {
     padding: 34px 30px 30px;
     border-radius: 16px;
-    background: linear-gradient(303deg, #FBDDDD 0%, #FEE 100%);
+    background: linear-gradient(303deg, #fbdddd 0%, #fee 100%);
     position: relative;
 
     + .offer__card {
