@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="favicon.png" />
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
     <title>Главная - МАКО</title>
   </head>
@@ -88,12 +89,170 @@
               </form>
               <a href="" class="button">
                 Записаться
-                <span class="desktop-only">&nbsp;на прием</span>
+                <span class="desktop-only">на прием</span>
               </a>
             </div>
           </div>
-          
 
+          <section class="doctor-swiper__section">
+            <div class="heading">
+              <h1 class="h2">Наши врачи</h1>
+              <a href="" class="button button--white">Все врачи</a>
+            </div>
+            <div class="doctor-swiper__container">
+              <div class="swiper doctor-swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="" class="doctor-list__card">
+                      <span class="doctor-list__heart">12</span>
+                      <img src="img/doctor/fedorovic.png" class="doctor-list__img" alt="" />
+                      <span class="doctor-list__data">
+                        <span class="doctor-list__surname">Федорович</span>
+                        <span class="doctor-list__name">Александр Константинович</span>
+                        <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="" class="doctor-list__card">
+                      <span class="doctor-list__heart">12</span>
+                      <img src="img/doctor/prichodko.png" class="doctor-list__img" alt="" />
+                      <span class="doctor-list__data">
+                        <span class="doctor-list__surname">Приходько</span>
+                        <span class="doctor-list__name">Любовь Григорьевна</span>
+                        <span class="doctor-list__role">врач-нефролог</span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="" class="doctor-list__card">
+                      <span class="doctor-list__heart">35</span>
+                      <img src="img/doctor/kostyuchenko.png" class="doctor-list__img" alt="" />
+                      <span class="doctor-list__data">
+                        <span class="doctor-list__surname">Костюченко</span>
+                        <span class="doctor-list__name">Валентина Максимовна</span>
+                        <span class="doctor-list__role">врач-офтальмолог</span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="" class="doctor-list__card">
+                      <span class="doctor-list__heart">12</span>
+                      <img src="img/doctor/ivanova.png" class="doctor-list__img" alt="" />
+                      <span class="doctor-list__data">
+                        <span class="doctor-list__surname">Иванова</span>
+                        <span class="doctor-list__name">Мария Алексеевна</span>
+                        <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                      </span>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="" class="doctor-list__card">
+                      <span class="doctor-list__heart">12</span>
+                      <img src="img/doctor/ivanova.png" class="doctor-list__img" alt="" />
+                      <span class="doctor-list__data">
+                        <span class="doctor-list__surname">Иванова</span>
+                        <span class="doctor-list__name">Мария Алексеевна</span>
+                        <span class="doctor-list__role">врач-онколог, онкохирург</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination doctor-swiper__pagination"></div>
+            </div>
+          </section>
+
+          <section class="review__section">
+            <div class="heading">
+              <h2 class="h2">
+                Отзывы
+                <span class="circle">5</span>
+              </h2>
+              <a href="" class="button button--green">Оставить отзыв</a>
+            </div>
+            <div class="review__grid">
+              <div class="review__card">
+                <div class="review__card--top">
+                  <div class="review__card--top-img">
+                    <img src="img/review/katerina.png" alt="Фото клиента" />
+                  </div>
+                  <div class="review__card--top-text">
+                    <p class="review__card--top-name">Катерина Кулакова</p>
+                    <p class="review__card--top-date">10 июня 2023</p>
+                  </div>
+                  <img src="img/icons/stars-5.svg" class="review__card--top-stars" alt="5 звёзд" />
+                </div>
+                <div class="review__card--text">
+                  Качеством оказанных услуг очень довольна! Уже много лет советую и буду продолжать советовать данную
+                  клинику и врача в частности! Человечное отношение, заинтересованность в выздоровлении, эмпатия.
+                  Спасибо!
+                </div>
+              </div>
+              <div class="review__card">
+                <div class="review__card--top">
+                  <div class="review__card--top-img">
+                    <img src="img/review/noname.svg" alt="Фото клиента" />
+                  </div>
+                  <div class="review__card--top-text">
+                    <p class="review__card--top-name">Любовь Григорьевна Приходько</p>
+                    <p class="review__card--top-date">10 июня 2023</p>
+                  </div>
+                  <img src="img/icons/stars-5.svg" class="review__card--top-stars" alt="5 звёзд" />
+                </div>
+                <div class="review__card--text">
+                  Отличное место. Приятный персонал, знающий свое дело. Приехали с ребёнком на МРТ с контрастом, как
+                  оказалось не все клиники делают, но тут без вопросов. Чистота приятный персонал и цена. Спасибо Вам и
+                  всех благ!
+                </div>
+              </div>
+              <div class="review__card">
+                <div class="review__card--top">
+                  <div class="review__card--top-img">
+                    <img src="img/review/noname.svg" alt="Фото клиента" />
+                  </div>
+                  <div class="review__card--top-text">
+                    <p class="review__card--top-name">Виктор Копаница</p>
+                    <p class="review__card--top-date">08 июня 2023</p>
+                  </div>
+                  <img src="img/icons/stars-5.svg" class="review__card--top-stars" alt="5 звёзд" />
+                </div>
+                <div class="review__card--text">Делали 2 прививки ребенку, хороший сервис и отношение к пациентам.</div>
+              </div>
+              <div class="review__card">
+                <div class="review__card--top">
+                  <div class="review__card--top-img">
+                    <img src="img/review/noname.svg" alt="Фото клиента" />
+                  </div>
+                  <div class="review__card--top-text">
+                    <p class="review__card--top-name">Сергей Федорович</p>
+                    <p class="review__card--top-date">19 мая 2023</p>
+                  </div>
+                  <img src="img/icons/stars-5.svg" class="review__card--top-stars" alt="5 звёзд" />
+                </div>
+                <div class="review__card--text">
+                  Качеством оказанных услуг очень довольна! Уже много лет советую и буду продолжать советовать данную
+                  клинику и врача в частности!
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="about__section">
+            <div class="about__box">
+              <div class="about__box--img">
+                <img src="img/about.jpg" alt="Фото клиники" />
+              </div>
+              <div class="about__box--text">
+                <h2 class="h2">Медцентр “МАКО” — это</h2>
+                <p class="text">«СМ‑Клиника» — это одна из крупнейших в России сетей многопрофильных медицинских центров. В Санкт-Петербурге мы оказываем платную квалифицированную помощь взрослым и детям по пяти адресам. Все клиники в СПб работают ежедневно, включая выходные и праздничные дни.</p>
+                <p class="text">Наша команда — это более 1500 специалистов различных областей.</p>
+                <p class="text">Медицинский центр работает в формате универсальной семейной клиники. В сферу нашей деятельности входят все виды медицинской помощи: диагностика, лечение, восстановление и профилактика.</p>
+                <a href="" class="about__box--link">Узнать больше</a>
+              </div>
+            </div>
+          </section>
         </main>
         <footer class="footer">
           <div class="container">
@@ -127,6 +286,7 @@
         </footer>
       </div>
     </div>
+    <script src="js/swiper-bundle.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>

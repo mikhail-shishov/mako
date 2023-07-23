@@ -14,7 +14,12 @@ const serviceMore = document.querySelectorAll('.service__card--more');
 serviceMore.forEach((el) => {
   el.addEventListener('click', (e) => {
     e.preventDefault();
-    el.previousElementSibling.classList.add('is-open');
+    el.previousElementSibling.classList.toggle('is-open');
+    if (el.previousElementSibling.classList.contains('is-open')) {
+      el.innerHTML = 'Свернуть описание';
+    } else {
+      el.innerHTML = 'Показать все';
+    }
   });
 });
 
@@ -57,7 +62,33 @@ if (window.screen.width <= 1024) {
 }
 
 // бургер
-let burger = document.querySelector(".burger");
-burger.addEventListener("click", function () {
-  document.body.classList.toggle("header__open");
+let burger = document.querySelector('.burger');
+burger.addEventListener('click', function () {
+  document.body.classList.toggle('header__open');
+});
+
+// doctor slider
+const doctorSwiper = new Swiper('.doctor-swiper', {
+  // Optional parameters
+  spaceBetween: 20,
+  slidesPerView: 1,
+  loop: true,
+  autoplay: true,
+  breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+    1280: {
+      slidesPerView: 4,
+    }
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.doctor-swiper__pagination',
+    clickable: true,
+  },
 });

@@ -150,6 +150,16 @@
   &__header {
     margin: 0 -20px;
     position: relative;
+
+    @media (max-width: 1024px) {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9;
+      background: white;
+      overflow-y: visible;
+    }
+
     &--top {
       display: none;
       padding: 20px;
@@ -159,6 +169,8 @@
 
       @media (max-width: 1024px) {
         display: flex;
+        width: 100%;
+        margin-bottom: 0;
       }
 
       .logo {
@@ -200,7 +212,7 @@
         align-items: flex-start;
         max-width: 280px;
         margin: auto;
-        padding-top: 40px;
+        padding: 40px 0;
         margin-top: 40px;
         border-top: 1px solid $lightgrey1;
       }
@@ -216,7 +228,7 @@
 }
 
 .header__open {
-  overflow: hidden;
+  overflow-y: hidden;
   &:before {
     content: '';
     background-color: white;
@@ -232,6 +244,8 @@
     min-height: 100vh;
     &--list {
       display: block;
+      max-height: calc(100vh - 91px);
+      overflow-y: auto;
     }
   }
 
