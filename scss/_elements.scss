@@ -552,6 +552,10 @@
           &-active {
             background: $green;
           }
+
+          @media (max-width: 1024px) {
+            margin: 0 5px;
+          }
         }
       }
     }
@@ -843,6 +847,7 @@
     box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
     display: flex;
     flex-direction: column;
+  
     &--heading {
       display: flex;
       align-items: center;
@@ -939,7 +944,7 @@
         }
         &__card {
           text-decoration: none;
-          transition: .3s;
+          transition: 0.3s;
 
           &:hover {
             background-color: $lightgrey4;
@@ -1133,7 +1138,7 @@
       &--more {
         margin-top: 10px;
       }
-    } 
+    }
   }
   &__box {
     display: flex;
@@ -1192,6 +1197,62 @@
 
     @media (max-width: 1440px) {
       gap: 40px;
+    }
+  }
+}
+
+.offer {
+  &__row {
+    display: flex;
+    gap: 24px;
+
+    .promo__offer--box {
+      max-width: 900px;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__col {
+      width: 65%;
+      max-width: 1000px;
+
+    @media (max-width: 1440px) {
+      width: 75%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  &__card {
+    padding: 34px 30px 30px;
+    border-radius: 16px;
+    background: linear-gradient(303deg, #FBDDDD 0%, #FEE 100%);
+    position: relative;
+
+    + .offer__card {
+      margin-top: 20px;
+    }
+
+    &--name {
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 0;
+    }
+
+    &--img {
+      max-width: 230px;
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+    }
+
+    .button {
+      margin-top: 55px;
+      position: relative;
+      z-index: 1;
     }
   }
 }
