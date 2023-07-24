@@ -798,14 +798,16 @@
     &--text {
       color: $black;
       font-size: 20px;
-      display: flex;
-      flex-direction: column;
 
       a {
         color: $black;
         text-decoration: none;
       }
 
+      p {
+        margin: 0;
+      }
+      
       @media (max-width: 1280px) {
         font-size: 16px;
       }
@@ -1073,7 +1075,7 @@
   &__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    gap: 40px 20px;
     margin-top: 60px;
 
     @media (max-width: 1440px) {
@@ -1082,6 +1084,7 @@
     @media (max-width: 768px) {
       grid-template-columns: repeat(1, 1fr);
       margin-top: 40px;
+      gap: 20px;
     }
   }
 
@@ -1091,6 +1094,11 @@
     padding: 20px 20px 50px;
     box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
     background-color: white;
+
+    @media (max-width: 768px) {
+      padding: 20px 20px 40px;
+    }
+
     &--top {
       position: relative;
       overflow: hidden;
@@ -1122,6 +1130,7 @@
         background-color: $red;
         border-radius: 50px;
         text-align: center;
+        margin-right: 12px;
 
         &-current {
           background-color: $green;
@@ -1129,7 +1138,6 @@
       }
       &-end {
         color: $lightgrey7;
-        margin-left: 12px;
         font-size: 16px;
       }
     }
@@ -1137,7 +1145,7 @@
       color: $black;
       font-size: 24px;
       font-weight: 700;
-      margin-bottom: 55px;
+      margin-bottom: 50px;
       text-decoration: none;
       transition: color 0.3s;
 
@@ -1149,6 +1157,7 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      padding: 0 10px;
     }
     &--more {
       margin-top: auto;
@@ -1396,6 +1405,28 @@
       margin-top: 55px;
       position: relative;
       z-index: 1;
+    }
+  }
+}
+
+.error {
+  &__section {
+    margin: 100px 0;
+    text-align: center;
+
+    .text, p {
+      font-size: 24px;
+
+      @media (max-width: 1024px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &__img {
+    max-width: 100%;
+    margin-bottom: 60px;
+    @media (max-width: 1024px) {
+      margin-bottom: 20px;
     }
   }
 }
