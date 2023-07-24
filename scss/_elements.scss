@@ -17,7 +17,13 @@
   }
 
   .h1,
-  .h2 {
+  h1,
+  .h2,
+  h2,
+  .h3,
+  h3,
+  .h4,
+  h4 {
     margin: 0;
   }
 
@@ -68,7 +74,7 @@
       }
 
       @media (max-width: 1680px) {
-        gap: 14px;
+        gap: 13px;
       }
 
       @media (max-width: 1280px) {
@@ -96,6 +102,16 @@
       align-items: center;
       justify-content: center;
       gap: 6px;
+
+      @media (max-width: 1600px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      @media (max-width: 1440px) {
+        flex-direction: row;
+        align-items: center;
+      }
 
       @media (max-width: 1280px) {
         flex-direction: column;
@@ -195,10 +211,10 @@
       min-width: calc(100vw - 770px);
       border: 1px solid #ccd5e7;
       @media (max-width: 1900px) {
-        min-width: calc(100vw - 670px);
+        min-width: calc(100vw - 641px);
       }
       @media (max-width: 1440px) {
-        min-width: calc(100vw - 500px);
+        min-width: calc(100vw - 412px);
       }
       @media (max-width: 1024px) {
         min-width: 280px;
@@ -235,7 +251,7 @@
   margin: 0 0 57px;
 
   @media (max-width: 1024px) {
-    margin: 120px 0 30px;
+    margin: 0 0 30px;
   }
 
   @media (max-width: 768px) {
@@ -467,7 +483,14 @@
         padding: 30px 30px 0;
         gap: 20px;
 
-        .h1 {
+        .h1,
+        h1,
+        .h2,
+        h2,
+        .h3,
+        h3,
+        .h4,
+        h4 {
           margin-top: 0;
         }
       }
@@ -493,7 +516,8 @@
       max-width: 540px;
       position: relative;
       z-index: 2;
-      .text {
+      .text,
+      p {
         font-weight: 600;
         font-size: 18px;
         @media (max-width: 768px) {
@@ -505,7 +529,8 @@
         flex-direction: column;
         max-width: 450px;
 
-        .text {
+        .text,
+        p {
           margin-top: 0;
         }
       }
@@ -598,6 +623,10 @@
       min-width: 530px;
       max-height: 540px;
 
+      @media (max-width: 1024px) {
+        padding: 30px;
+      }
+
       &-list {
         list-style: none;
         padding: 0;
@@ -647,7 +676,12 @@
     border-radius: 16px;
     position: relative;
 
-    .h2 {
+    .h1,
+    h1,
+    .h2,
+    h2,
+    .h3,
+    h3 {
       margin: 0 0 15px;
     }
 
@@ -855,6 +889,7 @@
       }
       &-stars {
         margin-left: auto;
+        padding-left: 10px;
         max-height: 22px;
 
         @media (max-width: 1280px) {
@@ -863,6 +898,7 @@
 
         @media (max-width: 1024px) {
           margin-left: 0;
+          padding-left: 0;
         }
       }
     }
@@ -1150,7 +1186,14 @@
       align-items: center;
       gap: 20px;
 
-      .h2 {
+      .h1,
+      h1,
+      .h2,
+      h2,
+      .h3,
+      h3,
+      .h4,
+      h4 {
         margin-top: 15px;
         font-size: 40px;
 
@@ -1171,7 +1214,8 @@
         flex-direction: column;
       }
 
-      .text {
+      .text,
+      p {
         &:last-of-type {
           margin-bottom: 55px;
           @media (max-width: 1280px) {
@@ -1248,11 +1292,19 @@
     &--text {
       flex-basis: 50%;
 
-      .h2 {
+      .h1,
+      h1,
+      .h2,
+      h2,
+      .h3,
+      h3,
+      .h4,
+      h4 {
         margin-top: 10px;
       }
 
-      .text {
+      .text,
+      p {
         margin-bottom: 30px;
       }
     }
@@ -1270,9 +1322,14 @@
 
     .promo__offer--box {
       max-width: 900px;
+
+      @media (max-width: 1280px) {
+        max-width: 100%;
+        align-items: flex-start;
+      }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1280px) {
       flex-direction: column;
     }
   }
@@ -1284,8 +1341,15 @@
       width: 75%;
     }
 
+    @media (max-width: 1280px) {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+    }
+
     @media (max-width: 768px) {
       width: 100%;
+      flex-direction: column;
     }
   }
   &__card {
@@ -1294,8 +1358,16 @@
     background: linear-gradient(303deg, #fbdddd 0%, #fee 100%);
     position: relative;
 
+    @media (max-width: 1280px) {
+      flex-grow: 1;
+      flex-basis: 50%;
+    }
+
     + .offer__card {
       margin-top: 20px;
+      @media (max-width: 1280px) {
+        margin-top: 0;
+      }
     }
 
     &--name {
