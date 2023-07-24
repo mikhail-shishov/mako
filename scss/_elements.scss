@@ -934,6 +934,7 @@
     height: 60px;
     width: 60px;
     object-fit: contain;
+    transition: .3s;
 
     @media (max-width: 576px) {
       max-height: 40px;
@@ -1045,7 +1046,15 @@
           transition: 0.3s;
 
           &:hover {
-            background-color: $lightgrey4;
+            background-color: $green;
+
+            .service__icon {
+              filter: brightness(5);
+            }
+
+            .service__card--heading-name {
+              color: white;
+            }
           }
 
           &--heading {
