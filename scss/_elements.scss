@@ -36,7 +36,7 @@
 
 .main {
   padding: 0 120px 0 45px;
-  max-width: calc(100vw - 340px);
+  max-width: calc(100vw - 360px);
 
   @media (max-width: 1900px) {
     padding: 0 40px;
@@ -44,7 +44,7 @@
 
   @media (max-width: 1440px) {
     padding: 0 30px;
-    max-width: calc(100vw - 220px);
+    max-width: calc(100vw - 240px);
   }
 
   @media (max-width: 1024px) {
