@@ -893,6 +893,12 @@
         margin-left: auto;
         padding-left: 10px;
         max-height: 22px;
+        display: flex;
+        gap: 2px;
+
+        img {
+          max-width: 20px;
+        }
 
         @media (max-width: 1280px) {
           max-height: 16px;
@@ -1054,8 +1060,14 @@
               filter: brightness(5);
             }
 
-            .service__card--heading-name {
-              color: white;
+            .service__card--heading {
+              &-name, .link--more {
+                color: white;
+                text-decoration-color: white;
+                &:before {
+                  background-color: $red;
+                }
+              }
             }
           }
 
