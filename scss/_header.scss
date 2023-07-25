@@ -1,3 +1,6 @@
+.arrow {
+}
+
 .aside {
   border-right: 1px solid $lightgrey1;
   min-height: 100vh;
@@ -103,34 +106,41 @@
 
       .dropdown {
         &__button {
-          position: relative;
-          &:before {
-            content: '';
-            background-image: url(../img/icons/arrow-right.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 7px;
-            height: 11px;
-            display: inline-block;
-            position: absolute;
-            right: -14px;
-            top: 8px;
-            transition: transform 0.3s;
-          }
-          &.is-active {
-            &:before {
-              transform: rotate(90deg);
-            }
-            + .nav__list--dropdown {
-              display: flex;
-              flex-direction: column;
-              margin: 20px 0 0 10px;
-              gap: 10px;
+          &--container {
+            display: inline-flex;
+            position: relative;
+            gap: 7px;
 
-              a {
-                font-weight: 400;
-                font-size: 14px;
+            &.is-active {
+              .arrow {
+                transform: rotate(90deg);
               }
+              + .nav__list--dropdown {
+                display: flex;
+                flex-direction: column;
+                margin: 20px 0 0 10px;
+                gap: 10px;
+  
+                a {
+                  font-weight: 400;
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .arrow {
+              background-image: url(../img/icons/arrow-right.svg);
+              background-size: contain;
+              background-repeat: no-repeat;
+              width: 7px;
+              height: 11px;
+              display: inline-block;
+              position: absolute;
+              right: -14px;
+              top: 8px;
+              transition: transform 0.3s;
+              font-size: 0;
+              cursor: pointer;
             }
           }
         }

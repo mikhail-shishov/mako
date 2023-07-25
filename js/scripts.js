@@ -2,13 +2,13 @@ document.addEventListener(
   'DOMContentLoaded',
   function () {
     // dropdown в боковой панеле
-    const dropdownBtn = document.querySelectorAll('.dropdown__button');
+    const dropdownBtn = document.querySelectorAll('.arrow');
     dropdownBtn.forEach((el) => {
       el.addEventListener('click', () => {
         dropdownBtn.forEach(function (element) {
-          element.classList.remove('is-active');
+          element.parentElement.classList.remove('is-active');
         });
-        el.classList.toggle('is-active');
+        el.parentElement.classList.toggle('is-active');
       });
     });
 
