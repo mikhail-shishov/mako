@@ -208,13 +208,13 @@
       width: auto;
       padding: 23px 48px;
       opacity: 1;
-      min-width: calc(100vw - 770px);
+      min-width: calc(100vw - 785px);
       border: 1px solid #ccd5e7;
       @media (max-width: 1900px) {
-        min-width: calc(100vw - 641px);
+        min-width: calc(100vw - 659px);
       }
       @media (max-width: 1440px) {
-        min-width: calc(100vw - 412px);
+        min-width: calc(100vw - 432px);
       }
       @media (max-width: 1024px) {
         min-width: 280px;
@@ -858,13 +858,6 @@
       align-items: center;
       margin-bottom: 30px;
 
-      @media (max-width: 1024px) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        margin-bottom: 20px;
-      }
-
       &-img {
         margin-right: 20px;
 
@@ -876,6 +869,7 @@
         font-weight: 600;
         color: $black;
         margin: 0 0 3px;
+        font-size: 18px;
 
         @media (max-width: 1280px) {
           font-size: 14px;
@@ -907,6 +901,17 @@
         @media (max-width: 1024px) {
           margin-left: 0;
           padding-left: 0;
+        }
+      }
+      &-info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+
+        @media (max-width: 576px) {
+          flex-direction: column;
+          gap: 10px;
         }
       }
     }
@@ -962,6 +967,8 @@
       padding: 30px 40px;
       border-bottom: 1px solid $lightgrey1;
       height: 100%;
+      flex: 0 0;
+      text-decoration: none;
 
       @media (max-width: 576px) {
         padding: 20px;
@@ -983,6 +990,10 @@
     }
     &--body {
       padding: 30px 40px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
 
       @media (max-width: 576px) {
         padding: 20px;
@@ -994,7 +1005,8 @@
       gap: 10px;
       margin-bottom: 35px;
 
-      a {
+      > a,
+      > span {
         color: $black;
         text-decoration-color: $red;
         transition: color 0.3s;
@@ -1010,7 +1022,8 @@
       }
 
       &.is-open {
-        a {
+        > a,
+        > span {
           display: inline-block;
         }
       }
@@ -1019,9 +1032,9 @@
       color: $green;
       text-decoration: none;
       border-bottom: 1px dashed $green;
-      margin-top: auto;
-      display: inline-block;
+      display: inline-flex;
       transition: color 0.3s;
+      margin-top: auto;
 
       &:hover {
         color: darken($green, 10%);
@@ -1061,7 +1074,8 @@
             }
 
             .service__card--heading {
-              &-name, .link--more {
+              &-name,
+              .link--more {
                 color: white;
                 text-decoration-color: white;
                 &:before {
@@ -1073,6 +1087,8 @@
 
           &--heading {
             height: 100%;
+            flex-grow: 1;
+            border: 0;
             &-name {
               font-size: 18px;
             }
