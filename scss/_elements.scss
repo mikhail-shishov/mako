@@ -1500,7 +1500,7 @@
         color: white;
       }
     }
-    &--next {
+    &--next, &--prev {
       img {
         width: 24px;
 
@@ -1509,7 +1509,7 @@
         }
       }
     }
-    &--last {
+    &--last, &--first {
       img {
         width: 30px;
 
@@ -1518,5 +1518,58 @@
         }
       }
     }
+    &--prev, &--first {
+      transform: rotate(180deg);
+    }
   }
 }
+
+.article {
+  max-width: 940px;
+
+  &__note {
+    position: relative;
+    padding: 50px 180px 50px 60px;
+    margin: 65px 0 50px;
+    border-radius: 16px;
+    background: linear-gradient(303deg, #fbdddd 0%, #fee 100%);
+
+    &:before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 132px;
+      height: 118px;
+      background-image: url(../img/icons/heart-plus.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    *:first-child {
+      margin-top: 0;
+    }
+
+    *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__body {
+    padding: 0 60px;
+
+    > p {
+      color: $black;
+      line-height: 1.4;
+      margin-bottom: 25px;
+  
+      a {
+        color: $green;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
