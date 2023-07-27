@@ -126,6 +126,12 @@ document.addEventListener(
       //   },
       // },
     });
+
+    $("#order-form, #review-form").validate({
+      submitHandler: function(form) {
+        form.submit();
+      }
+     });
   },
   false
 );

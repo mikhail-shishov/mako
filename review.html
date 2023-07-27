@@ -102,7 +102,7 @@
                 <button class="search__button search__button--top" type="submit">Поиск</button>
                 <input type="text" class="search__input" placeholder="Введите ваш поисковой запрос" />
               </form>
-              <a href="" class="button">
+              <a href="#order-form" class="button popup-with-form popup-with-form">
                 Записаться
                 <span class="desktop-only">&nbsp;на прием</span>
               </a>
@@ -287,30 +287,75 @@
       </div>
     </div>
 
-    <!-- form itself -->
-    <form id="review-form" class="mfp-hide white-popup-block">
+    <form id="order-form" class="mfp-hide contact-form white-popup-block">
       <div class="mfp-form-heading">
-        <h2 class="h2">Оставьте свой отзыв</h2>
+        <h2 class="h2">Запись на прием</h2>
       </div>
       <fieldset class="mfp-form-fields">
         <div class="mfp-form-row">
           <div class="mfp-form-block form__label--container">
-            <input id="name" name="name" class="form__label--input form__label--input-float" type="text" placeholder=" " required />
-            <label for="name">Ваше имя</label>
+            <input id="name1" name="name1" class="form__label--input form__label--input-float" type="text" placeholder=" " required />
+            <label for="name1">Ваше имя<span class="required">*</span></label>
           </div>
           <div class="mfp-form-block form__label--container">
-            <input id="phone" name="phone" type="tel" class="form__label--input form__label--input-float" placeholder=" " required />
-            <label for="phone">Телефон<span class="required">*</span></label>
+            <input id="phone1" name="phone1" type="tel" class="form__label--input form__label--input-float" placeholder=" " required />
+            <label for="phone1">Телефон<span class="required">*</span></label>
+          </div>
+        </div>
+        <div class="mfp-form-row">
+          <div class="mfp-form-block form__label--container">
+            <input id="email1" name="email1" class="form__label--input form__label--input-float" type="text" placeholder=" " required />
+            <label for="email1">Ваш email<span class="required">*</span></label>
+          </div>
+          <div class="mfp-form-block form__label--container">
+            <select name="" id="spec1" class="select form__label--input form__label--input-float">
+              <option selected disabled value=""></option>
+              <option>Ухо</option>
+              <option>Горло</option>
+              <option>Нос</option>
+            </select>
+            <label for="spec1">Выберите специализацию<span class="required">*</span></label>
           </div>
         </div>
         <textarea id="textarea" class="form__textarea" placeholder="Напишите ваш отзыв"></textarea>
         <input type="submit" class="button" value="Оставить отзыв" />
         <p class="form__note">Нажимая на кнопку, вы даете согласие на <a href="">обработку своих персональных данных</a></p>
       </fieldset>
+      <div class="mfp-form-success">
+        <p>Спасибо за оказанное нашему медицинскому центру доверие. </p>
+
+        <p>Наши администраторы свяжутся с вами в ближайшее время для уточнения деталей приема и согласования удобного для вас времени.</p>
+      </div>
+    </form>
+
+    <form id="review-form" class="mfp-hide contact-form white-popup-block">
+      <div class="mfp-form-heading">
+        <h2 class="h2">Оставьте свой отзыв</h2>
+      </div>
+      <fieldset class="mfp-form-fields">
+        <div class="mfp-form-row">
+          <div class="mfp-form-block form__label--container">
+            <input id="name2" name="name2" class="form__label--input form__label--input-float" type="text" placeholder=" " />
+            <label for="name2">Ваше имя</label>
+          </div>
+          <div class="mfp-form-block form__label--container">
+            <input id="phone2" name="phone2" type="tel" class="form__label--input form__label--input-float" placeholder=" " required />
+            <label for="phone2">Телефон<span class="required">*</span></label>
+          </div>
+        </div>
+        <textarea id="textarea" class="form__textarea" placeholder="Напишите ваш отзыв"></textarea>
+        <input type="submit" class="button" value="Оставить отзыв" />
+        <p class="form__note">Нажимая на кнопку, вы даете согласие на <a href="">обработку своих персональных данных</a></p>
+      </fieldset>
+      <div class="mfp-form-success">
+        <p>Спасибо, что делаете наш центр лучше! Ваш отзыв будет опубликован на сайте после модерации.</p>
+        <p>Обращаем ваше внимание, что если вы указали несуществующий или некорректный номер телефона, то администрация центра вправе оставить такой отзыв неопубликованным.</p>
+      </div>
     </form>
 
     <script src="js/jquery-3.7.0.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
+    <script src="js/localization/messages_ru.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/scripts.js"></script>
