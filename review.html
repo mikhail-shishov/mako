@@ -123,7 +123,7 @@
                 Отзывы
                 <span class="circle">5</span>
               </h1>
-              <a href="" class="button button--green">Оставить отзыв</a>
+              <a href="#review-form" class="button button--green popup-with-form">Оставить отзыв</a>
             </div>
             <div class="review__grid">
               <div class="review__card">
@@ -286,9 +286,34 @@
         </footer>
       </div>
     </div>
+
+    <!-- form itself -->
+    <form id="review-form" class="mfp-hide white-popup-block">
+      <div class="mfp-form-heading">
+        <h2 class="h2">Оставьте свой отзыв</h2>
+      </div>
+      <fieldset class="mfp-form-fields">
+        <div class="mfp-form-row">
+          <div class="mfp-form-block form__label--container">
+            <input id="name" name="name" class="form__label--input form__label--input-float" type="text" placeholder=" " required />
+            <label for="name">Ваше имя</label>
+          </div>
+          <div class="mfp-form-block form__label--container">
+            <input id="phone" name="phone" type="tel" class="form__label--input form__label--input-float" placeholder=" " required />
+            <label for="phone">Телефон<span class="required">*</span></label>
+          </div>
+        </div>
+        <textarea id="textarea" class="form__textarea" placeholder="Напишите ваш отзыв"></textarea>
+        <input type="submit" class="button" value="Оставить отзыв" />
+        <p class="form__note">Нажимая на кнопку, вы даете согласие на <a href="">обработку своих персональных данных</a></p>
+      </fieldset>
+    </form>
+
     <script src="js/jquery-3.7.0.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/scripts.js"></script>
   </body>
 </html>
+

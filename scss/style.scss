@@ -15,3 +15,7 @@ body {
     color: $black;
     font-size: 16px;
 }
+
+input, textarea {
+    outline-color: $black;
+}
