@@ -110,6 +110,25 @@ document.addEventListener(
       },
     });
 
+    var photoSwiper = new Swiper(".photo-swiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var thumbsSwiper = new Swiper(".thumbs-swiper", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: photoSwiper,
+      },
+    });
+
     $('.popup-with-form').magnificPopup({
       type: 'inline',
       preloader: false,
@@ -127,7 +146,19 @@ document.addEventListener(
       // },
     });
 
-    $("#order-form, #review-form").validate({
+    $("#order-form, #review-form, #call-form").validate({
+      messages: {
+        name: {
+          required: "Пожалуйста, введите имя",
+        },
+        email: {
+          required: "Пожалуйста, введите email",
+          email: "Введите корректный email",
+        },
+        enquiry: {
+          required: "Пожалуйста, введите сообщение",                             
+        },
+      },
       submitHandler: function(form) {
         form.submit();
       }
