@@ -84,6 +84,14 @@ document.addEventListener(
       document.body.classList.toggle('header__open');
     });
 
+    // accordion
+    const accordionBtn = document.querySelectorAll('.accordion__button');
+    accordionBtn.forEach((el) => {
+      el.addEventListener('click', () => {
+        el.parentElement.parentElement.classList.toggle('is-open');
+      });
+    });
+
     // doctor slider
     const doctorSwiper = new Swiper('.doctor-swiper', {
       // Optional parameters
@@ -106,6 +114,20 @@ document.addEventListener(
       // If we need pagination
       pagination: {
         el: '.doctor-swiper__pagination',
+        clickable: true,
+      },
+    });
+
+
+    const doctorSmallSwiper = new Swiper('.doctor-small-swiper', {
+      // Optional parameters
+      slidesPerView: 1,
+      loop: true,
+      autoplay: true,
+
+      // If we need pagination
+      pagination: {
+        el: '.doctor-small-swiper__pagination',
         clickable: true,
       },
     });
