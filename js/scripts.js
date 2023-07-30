@@ -5,9 +5,9 @@ document.addEventListener(
     const dropdownBtn = document.querySelectorAll('.arrow');
     dropdownBtn.forEach((el) => {
       el.addEventListener('click', () => {
-        dropdownBtn.forEach(function (element) {
-          element.parentElement.classList.remove('is-active');
-        });
+        // dropdownBtn.forEach(function (element) {
+        //   element.parentElement.classList.remove('is-active');
+        // });
         el.parentElement.classList.toggle('is-active');
       });
     });
@@ -101,23 +101,22 @@ document.addEventListener(
       autoplay: true,
       breakpoints: {
         576: {
-          slidesPerView: 2,
+          slidesPerView: 2
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 3
         },
         1280: {
-          slidesPerView: 4,
-        },
+          slidesPerView: 4
+        }
       },
 
       // If we need pagination
       pagination: {
         el: '.doctor-swiper__pagination',
-        clickable: true,
-      },
+        clickable: true
+      }
     });
-
 
     const doctorSmallSwiper = new Swiper('.doctor-small-swiper', {
       // Optional parameters
@@ -128,11 +127,11 @@ document.addEventListener(
       // If we need pagination
       pagination: {
         el: '.doctor-small-swiper__pagination',
-        clickable: true,
-      },
+        clickable: true
+      }
     });
 
-    var thumbsSwiper = new Swiper(".thumbs-swiper", {
+    var thumbsSwiper = new Swiper('.thumbs-swiper', {
       loop: true,
       spaceBetween: 10,
       slidesPerView: 2,
@@ -140,62 +139,84 @@ document.addEventListener(
       watchSlidesProgress: true,
       breakpoints: {
         375: {
-          slidesPerView: 3,
+          slidesPerView: 3
         },
         576: {
-          slidesPerView: 4,
+          slidesPerView: 4
         },
         1280: {
-          slidesPerView: 5,
-        },
-      },
+          slidesPerView: 5
+        }
+      }
     });
-    var photoSwiper = new Swiper(".photo-swiper", {
+    var photoSwiper = new Swiper('.photo-swiper', {
       loop: true,
       spaceBetween: 10,
       navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
       },
       thumbs: {
-        swiper: thumbsSwiper,
+        swiper: thumbsSwiper
+      }
+    });
+
+    $('.popup-gallery').magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Загружается изображение #%curr%...',
+      mainClass: 'mfp-img',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
       },
+      image: {
+        tError: '<a href="%url%">Изображение #%curr%</a> не вышло загрузить.'
+      }
     });
 
     $('.popup-with-form').magnificPopup({
       type: 'inline',
-      preloader: false,
-
-      // When elemened is focused, some mobile browsers in some cases zoom in
-      // It looks not nice, so we disable it:
-      // callbacks: {
-      //   beforeOpen: function () {
-      //     if ($(window).width() < 700) {
-      //       this.st.focus = false;
-      //     } else {
-      //       this.st.focus = '#name';
-      //     }
-      //   },
-      // },
+      preloader: false
     });
 
-    $("#order-form, #review-form, #call-form").validate({
-      messages: {
+    checkInputValue('input');
+    checkInputValue('textarea');
+    $('.contact-form').validate({
+      errorElement: 'span',
+
+      rules: {
         name: {
-          required: "Пожалуйста, введите имя",
-        },
-        email: {
-          required: "Пожалуйста, введите email",
-          email: "Введите корректный email",
+          required: true
         },
         enquiry: {
-          required: "Пожалуйста, введите сообщение",                             
+          required: true
         },
+        email: {
+          required: true,
+          email: true
+        }
+      },
+
+      messages: {
+        name: {
+          required: 'Пожалуйста, введите имя'
+        },
+        email: {
+          required: 'Пожалуйста, введите email',
+          email: 'Введите корректный email'
+        },
+        enquiry: {
+          required: 'Пожалуйста, введите сообщение'
+        }
       },
       submitHandler: function(form) {
-        form.submit();
-      }
-     });
+        //здесь я сам напишу код
+         
+       }
+    });
   },
   false
 );
+

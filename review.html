@@ -141,7 +141,7 @@
                       <img src="img/icons/star.svg" alt="Звезда" />
                       <img src="img/icons/star.svg" alt="Звезда" />
                       <img src="img/icons/star.svg" alt="Звезда" />
-                      <img src="img/icons/star.svg" alt="Звезда" />
+                      <img src="img/icons/star-empty.svg" alt="Звезда" />
                     </div>
                   </div>
                 </div>
@@ -294,18 +294,45 @@
       <fieldset class="mfp-form-fields">
         <div class="mfp-form-row">
           <div class="mfp-form-block form__label--container">
-            <input id="name1" name="name1" class="form__label--input form__label--input-float" type="text" placeholder=" " required />
-            <label for="name1">Ваше имя<span class="required">*</span></label>
+            <input
+              id="name1"
+              name="name1"
+              class="form__label--input form__label--input-float"
+              type="text"
+              placeholder=" "
+              required />
+            <label for="name1">
+              Ваше имя
+              <span class="required">*</span>
+            </label>
           </div>
           <div class="mfp-form-block form__label--container">
-            <input id="phone1" name="phone1" type="tel" class="form__label--input form__label--input-float" placeholder=" " required />
-            <label for="phone1">Телефон<span class="required">*</span></label>
+            <input
+              id="phone1"
+              name="phone1"
+              type="tel"
+              class="form__label--input form__label--input-float"
+              placeholder=" "
+              required />
+            <label for="phone1">
+              Телефон
+              <span class="required">*</span>
+            </label>
           </div>
         </div>
         <div class="mfp-form-row">
           <div class="mfp-form-block form__label--container">
-            <input id="email1" name="email1" class="form__label--input form__label--input-float" type="text" placeholder=" " required />
-            <label for="email1">Ваш email<span class="required">*</span></label>
+            <input
+              id="email1"
+              name="email1"
+              class="form__label--input form__label--input-float"
+              type="text"
+              placeholder=" "
+              required />
+            <label for="email1">
+              Ваш email
+              <span class="required">*</span>
+            </label>
           </div>
           <div class="mfp-form-block form__label--container">
             <select name="" id="spec1" class="select form__label--input form__label--input-float">
@@ -314,17 +341,26 @@
               <option>Горло</option>
               <option>Нос</option>
             </select>
-            <label for="spec1">Выберите специализацию<span class="required">*</span></label>
+            <label for="spec1">
+              Выберите специализацию
+              <span class="required">*</span>
+            </label>
           </div>
         </div>
         <textarea id="textarea" class="form__textarea" placeholder="Напишите ваш отзыв"></textarea>
         <input type="submit" class="button" value="Оставить отзыв" />
-        <p class="form__note">Нажимая на кнопку, вы даете согласие на <a href="">обработку своих персональных данных</a></p>
+        <p class="form__note">
+          Нажимая на кнопку, вы даете согласие на
+          <a href="">обработку своих персональных данных</a>
+        </p>
       </fieldset>
       <div class="mfp-form-success">
-        <p>Спасибо за оказанное нашему медицинскому центру доверие. </p>
+        <p>Спасибо за оказанное нашему медицинскому центру доверие.</p>
 
-        <p>Наши администраторы свяжутся с вами в ближайшее время для уточнения деталей приема и согласования удобного для вас времени.</p>
+        <p>
+          Наши администраторы свяжутся с вами в ближайшее время для уточнения деталей приема и согласования удобного для
+          вас времени.
+        </p>
       </div>
     </form>
 
@@ -335,21 +371,56 @@
       <fieldset class="mfp-form-fields">
         <div class="mfp-form-row">
           <div class="mfp-form-block form__label--container">
-            <input id="name2" name="name2" class="form__label--input form__label--input-float" type="text" placeholder=" " />
+            <input
+              id="name2"
+              name="name2"
+              class="form__label--input form__label--input-float"
+              type="text"
+              placeholder=" " />
             <label for="name2">Ваше имя</label>
           </div>
           <div class="mfp-form-block form__label--container">
-            <input id="phone2" name="phone2" type="tel" class="form__label--input form__label--input-float" placeholder=" " required />
-            <label for="phone2">Телефон<span class="required">*</span></label>
+            <input
+              id="phone2"
+              name="phone2"
+              type="tel"
+              class="form__label--input form__label--input-float"
+              placeholder=" "
+              required />
+            <label for="phone2">
+              Телефон
+              <span class="required">*</span>
+            </label>
           </div>
         </div>
         <textarea id="textarea" class="form__textarea" placeholder="Напишите ваш отзыв"></textarea>
+        <div class="form__star">
+          <span class="form__star--name">Ваша оценка</span>
+          <div class="rating">
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label class="star" for="star5" title="Отлично" aria-hidden="true"></label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label class="star" for="star4" title="Хорошо" aria-hidden="true"></label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label class="star" for="star3" title="Средне" aria-hidden="true"></label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label class="star" for="star2" title="Плохо" aria-hidden="true"></label>
+            <input type="radio" id="star1" name="rating" value="1" />
+            <label class="star" for="star1" title="Ужасно" aria-hidden="true"></label>
+          </div>
+        </div>
         <input type="submit" class="button" value="Оставить отзыв" />
-        <p class="form__note">Нажимая на кнопку, вы даете согласие на <a href="">обработку своих персональных данных</a></p>
+        <p class="form__note">
+          Нажимая на кнопку, вы даете согласие на
+          <a href="">обработку своих персональных данных</a>
+        </p>
       </fieldset>
       <div class="mfp-form-success">
         <p>Спасибо, что делаете наш центр лучше! Ваш отзыв будет опубликован на сайте после модерации.</p>
-        <p>Обращаем ваше внимание, что если вы указали несуществующий или некорректный номер телефона, то администрация центра вправе оставить такой отзыв неопубликованным.</p>
+        <p>
+          Обращаем ваше внимание, что если вы указали несуществующий или некорректный номер телефона, то администрация
+          центра вправе оставить такой отзыв неопубликованным.
+        </p>
       </div>
     </form>
 
