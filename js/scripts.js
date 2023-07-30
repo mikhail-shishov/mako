@@ -132,14 +132,25 @@ document.addEventListener(
       },
     });
 
-    var photoSwiper = new Swiper(".photo-swiper", {
+    var thumbsSwiper = new Swiper(".thumbs-swiper", {
       loop: true,
       spaceBetween: 10,
-      slidesPerView: 4,
+      slidesPerView: 2,
       freeMode: true,
       watchSlidesProgress: true,
+      breakpoints: {
+        375: {
+          slidesPerView: 3,
+        },
+        576: {
+          slidesPerView: 4,
+        },
+        1280: {
+          slidesPerView: 5,
+        },
+      },
     });
-    var thumbsSwiper = new Swiper(".thumbs-swiper", {
+    var photoSwiper = new Swiper(".photo-swiper", {
       loop: true,
       spaceBetween: 10,
       navigation: {
@@ -147,7 +158,7 @@ document.addEventListener(
         prevEl: ".swiper-button-prev",
       },
       thumbs: {
-        swiper: photoSwiper,
+        swiper: thumbsSwiper,
       },
     });
 
