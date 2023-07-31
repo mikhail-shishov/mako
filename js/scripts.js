@@ -131,35 +131,42 @@ document.addEventListener(
       }
     });
 
-    var thumbsSwiper = new Swiper('.thumbs-swiper', {
-      loop: true,
-      spaceBetween: 10,
-      slidesPerView: 2,
-      freeMode: true,
-      watchSlidesProgress: true,
-      breakpoints: {
-        375: {
-          slidesPerView: 3
-        },
-        576: {
-          slidesPerView: 4
-        },
-        1280: {
-          slidesPerView: 5
+    const sliders = document.querySelectorAll('.photo-swiper');
+    const slidersThumbs = document.querySelectorAll('.thumbs-swiper');
+    for (i = 0; i < sliders.length; i++) {
+      sliders[i].classList.add('photo-swiper-' + i);
+      slidersThumbs[i].classList.add('thumbs-swiper-' + i);
+
+      var thumbsSwiper = new Swiper('.thumbs-swiper-' + i, {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 2,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          375: {
+            slidesPerView: 3
+          },
+          576: {
+            slidesPerView: 4
+          },
+          1280: {
+            slidesPerView: 5
+          }
         }
-      }
-    });
-    var photoSwiper = new Swiper('.photo-swiper', {
-      loop: true,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      thumbs: {
-        swiper: thumbsSwiper
-      }
-    });
+      });
+      var photoSwiper = new Swiper('.photo-swiper-' + i, {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        thumbs: {
+          swiper: thumbsSwiper
+        }
+      });
+    }
 
     $('.popup-gallery').magnificPopup({
       delegate: 'a',
@@ -182,22 +189,45 @@ document.addEventListener(
     });
 
     // select
-    const select = document.querySelectorAll(".select__button");
-    const option = document.querySelectorAll(".select__option");
+    const select = document.querySelectorAll('.select__button');
+    const option = document.querySelectorAll('.select__option');
     let index = 1;
     select.forEach((a) => {
-      a.addEventListener("click", (b) => {
-        const next = b.target.nextElementSibling;
-        next.classList.toggle("toggle");
+      a.addEventListener('click', (b) => {
+        const next = b.target.closest('div').nextElementSibling;
+        next.classList.toggle('toggle');
         next.style.zIndex = index++;
       });
     });
     option.forEach((a) => {
-      a.addEventListener("click", (b) => {
-        b.target.parentElement.classList.remove("toggle");
-        const parent = b.target.closest(".select").children[0];
-        parent.setAttribute("data-type", b.target.getAttribute("data-type"));
-        parent.innerText = b.target.getAttribute("data-type");
+      a.addEventListener('click', (b) => {
+        b.target.parentElement.classList.remove('toggle');
+        const parent = b.target.closest('.select').children[0];
+        parent.setAttribute('data-type', b.target.getAttribute('data-type'));
+        parent.innerText = b.target.getAttribute('data-type');
+      });
+    });
+
+    // dropdown в боковой панеле
+    const filterType = document.querySelectorAll('.doctor-list__filter-type button');
+    filterType.forEach((el) => {
+      el.addEventListener('click', () => {
+        filterType.forEach(function (element) {
+          element.classList.remove('is-active');
+        });
+        el.classList.toggle('is-active');
+      });
+    });
+
+    // dropdown в боковой панеле
+    const filterAlphabet = document.querySelectorAll('.doctor-list__alphabet a');
+    filterAlphabet.forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.preventDefault();
+        filterAlphabet.forEach(function (element) {
+          element.classList.remove('is-active');
+        });
+        el.classList.toggle('is-active');
       });
     });
 
@@ -231,10 +261,9 @@ document.addEventListener(
           required: 'Пожалуйста, введите сообщение'
         }
       },
-      submitHandler: function(form) {
+      submitHandler: function (form) {
         //здесь я сам напишу код
-         
-       }
+      }
     });
   },
   false
