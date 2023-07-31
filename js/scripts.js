@@ -194,6 +194,7 @@ document.addEventListener(
     let index = 1;
     select.forEach((a) => {
       a.addEventListener('click', (b) => {
+        document.querySelector('.select__button').classList.toggle('toggle');
         const next = b.target.closest('div').nextElementSibling;
         next.classList.toggle('toggle');
         next.style.zIndex = index++;

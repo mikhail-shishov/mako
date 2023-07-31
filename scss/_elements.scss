@@ -20,7 +20,6 @@
   border: 3px solid $lightgrey1;
 }
 
-
 .desktop-only {
   @media (max-width: 1440px) {
     display: none;
@@ -451,6 +450,9 @@
         @media (max-width: 1280px) {
           margin-bottom: 50px;
         }
+        @media (max-width: 768px) {
+          margin-bottom: 20px;
+        }
       }
       &-bottom {
         display: flex;
@@ -458,6 +460,14 @@
 
         .select {
           margin-left: 20px;
+
+          @media (max-width: 768px) {
+            margin-left: 0;
+          }
+        }
+
+        @media (max-width: 1280px) {
+          flex-wrap: wrap;
         }
       }
       &-type {
@@ -472,7 +482,7 @@
           cursor: pointer;
           padding: 0;
           margin-right: 30px;
-          transition: color .3s;
+          transition: color 0.3s;
 
           &.is-active {
             color: $black;
@@ -482,10 +492,28 @@
             color: $black;
           }
 
-          @media (max-width: 1280px) {
+          @media (max-width: 1440px) {
             font-size: 24px;
             margin-right: 20px;
           }
+
+          @media (max-width: 768px) {
+            font-size: 18px;
+          }
+        }
+
+        @media (max-width: 1280px) {
+          min-width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      &-search {
+        @media (max-width: 1280px) {
+          margin-bottom: 10px;
+        }
+
+        @media (max-width: 576px) {
+          width: 100%;
         }
       }
     }
@@ -504,7 +532,7 @@
         color: $lightgrey3;
         text-decoration: none;
         padding-bottom: 2px;
-        transition: color .3s;
+        transition: color 0.3s;
 
         &.is-active {
           color: $black;
@@ -514,10 +542,90 @@
         &:hover {
           color: $black;
         }
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
       }
 
       @media (max-width: 1440px) {
         gap: 6px;
+      }
+
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+      }
+    }
+    &__search {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      @media (max-width: 576px) {
+        width: 100%;
+      }
+      &--button {
+        border-radius: 50%;
+        background-color: $lightgrey1;
+        border: 1px solid $lightgrey1;
+        width: 56px;
+        height: 56px;
+        position: absolute;
+        right: 7px;
+        cursor: pointer;
+        font-size: 0;
+        z-index: 1;
+        transition: 0.3s;
+
+        &:before {
+          content: '';
+          width: 24px;
+          height: 24px;
+          background-image: url(../img/icons/search.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+
+        @media (max-width: 1680px) {
+          width: 44px;
+          height: 44px;
+          position: absolute;
+          right: 5px;
+        }
+      }
+      &--input {
+        border-radius: 36px;
+        background: #fff;
+        outline: none;
+        transition: 0.3s;
+        width: 600px;
+        height: 68px;
+        font-size: 16px;
+        padding: 23px 48px;
+        border: 1px solid $lightgrey6;
+
+        &::placeholder {
+          color: $lightgrey3;
+        }
+
+        @media (max-width: 1900px) {
+          width: 500px;
+        }
+
+        @media (max-width: 1680px) {
+          width: 360px;
+          padding: 23px;
+          height: 51px;
+        }
+
+        @media (max-width: 576px) {
+          width: 100%;
+        }
       }
     }
   }
@@ -752,7 +860,7 @@
       position: relative;
 
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 45%;
         right: -19px;
@@ -761,8 +869,19 @@
         transform: translateY(-50%) rotate(45deg);
         border-right: 1px solid $red;
         border-bottom: 1px solid $red;
-        transition: .3s;
+        transition: 0.3s;
       }
+    }
+
+    &.toggle {
+      .select__button--name:after {
+        transform: translateY(0) rotate(225deg);
+      }
+    }
+
+    @media (max-width: 1680px) {
+      padding: 16px 40px 16px 23px;
+      font-size: 14px;
     }
   }
 
@@ -781,7 +900,7 @@
     max-height: 240px;
     right: 0;
     border-radius: 16px;
-    background: #FFF;
+    background: #fff;
     box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
     z-index: 1;
     background: #fff;
@@ -806,6 +925,11 @@
     &.toggle {
       visibility: visible;
       transform: scale(1, 1);
+    }
+
+    @media (max-width: 768px) {
+      padding: 10px;
+      font-size: 14px;
     }
   }
 }
