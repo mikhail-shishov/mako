@@ -181,8 +181,28 @@ document.addEventListener(
       preloader: false
     });
 
-    checkInputValue('input');
-    checkInputValue('textarea');
+    // select
+    const select = document.querySelectorAll(".select__button");
+    const option = document.querySelectorAll(".select__option");
+    let index = 1;
+    select.forEach((a) => {
+      a.addEventListener("click", (b) => {
+        const next = b.target.nextElementSibling;
+        next.classList.toggle("toggle");
+        next.style.zIndex = index++;
+      });
+    });
+    option.forEach((a) => {
+      a.addEventListener("click", (b) => {
+        b.target.parentElement.classList.remove("toggle");
+        const parent = b.target.closest(".select").children[0];
+        parent.setAttribute("data-type", b.target.getAttribute("data-type"));
+        parent.innerText = b.target.getAttribute("data-type");
+      });
+    });
+
+    // checkInputValue('input');
+    // checkInputValue('textarea');
     $('.contact-form').validate({
       errorElement: 'span',
 

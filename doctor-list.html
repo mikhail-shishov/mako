@@ -6,7 +6,9 @@
     <link rel="icon" href="favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.min.css" />
@@ -22,14 +24,20 @@
           <nav class="nav">
             <ul class="nav__list">
               <li class="nav__list--item">
-                <div class="dropdown__button--container"><a href="" class="dropdown__button">О центре</a><i class="arrow">развернуть</i></div>
+                <div class="dropdown__button--container">
+                  <a href="" class="dropdown__button">О центре</a>
+                  <i class="arrow">развернуть</i>
+                </div>
                 <div class="nav__list--dropdown">
                   <a href="">О нас</a>
                   <a href="">История</a>
                 </div>
               </li>
               <li class="nav__list--item">
-                <div class="dropdown__button--container"><a class="dropdown__button">Услуги и цены</a><i class="arrow">развернуть</i></div>
+                <div class="dropdown__button--container">
+                  <a class="dropdown__button">Услуги и цены</a>
+                  <i class="arrow">развернуть</i>
+                </div>
                 <div class="nav__list--dropdown">
                   <a href="service.html">Услуга 1</a>
                   <a href="">История</a>
@@ -109,10 +117,66 @@
             </li>
           </ul>
           <section class="doctor-list__section">
-            <h1 class="h1">
-              Наши врачи
-              <span class="circle">16</span>
-            </h1>
+            <div class="doctor-list__filter">
+              <div class="doctor-list__filter-top">
+                <h1 class="h1">
+                  Наши врачи
+                  <span class="circle">16</span>
+                </h1>
+                <div class="doctor-list__alphabet">
+                  <a href="">А</a>
+                  <a href="">Б</a>
+                  <a href="">В</a>
+                  <a href="">Г</a>
+                  <a href="">Д</a>
+                  <a href="">Ж</a>
+                  <a href="">З</a>
+                  <a href="">И</a>
+                  <a href="">К</a>
+                  <a href="">Л</a>
+                  <a href="">М</a>
+                  <a href="">Н</a>
+                  <a href="">О</a>
+                  <a href="">П</a>
+                  <a href="">Р</a>
+                  <a href="">С</a>
+                  <a href="">Т</a>
+                  <a href="">У</a>
+                  <a href="">Ф</a>
+                  <a href="">Х</a>
+                  <a href="">Ц</a>
+                  <a href="">Ш</a>
+                  <a href="">Щ</a>
+                  <a href="">Э</a>
+                  <a href="">Ю</a>
+                  <a href="">Я</a>
+                </div>
+              </div>
+              <div class="doctor-list__filter-bottom">
+                <div class="doctor-list__filter-type">
+                  <button>Все</button>
+                  <button>Взрослые</button>
+                  <button>Детские</button>
+                </div>
+                <div class="doctor-list__filter-search">
+                  <form class="search" action="">
+                    <button class="search__button search__button--top" type="submit">Поиск</button>
+                    <input type="text" class="search__input" placeholder="Введите ваш поисковой запрос" />
+                  </form>
+                </div>
+                <div class="doctor-list__filter-sort">
+                  <div class="select">
+                    <div class="select__button" data-type="Все специальности">Все специальности</div>
+                    <div class="select__dropdown">
+                      <div class="select__option" data-type="Акушер-гинеколог">Акушер-гинеколог</div>
+                      <div class="select__option" data-type="Гематолог">Гематолог</div>
+                      <div class="select__option" data-type="Гематолог">Гастроэнтеролог</div>
+                      <div class="select__option" data-type="Гематолог">Кардиолог</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="doctor-list__grid">
               <a href="" class="doctor-list__card">
                 <span class="doctor-list__heart">12</span>
@@ -258,3 +322,4 @@
     <script src="js/scripts.js"></script>
   </body>
 </html>
+
