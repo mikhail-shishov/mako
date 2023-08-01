@@ -1,7 +1,7 @@
 document.addEventListener(
   'DOMContentLoaded',
   function () {
-    // dropdown в боковой панеле
+    // dropdown в боковой панели
     const dropdownBtn = document.querySelectorAll('.arrow');
     dropdownBtn.forEach((el) => {
       el.addEventListener('click', () => {
@@ -209,7 +209,7 @@ document.addEventListener(
       });
     });
 
-    // dropdown в боковой панеле
+    // фильтр по типу врачей
     const filterType = document.querySelectorAll('.doctor-list__filter-type button');
     filterType.forEach((el) => {
       el.addEventListener('click', () => {
@@ -220,7 +220,7 @@ document.addEventListener(
       });
     });
 
-    // dropdown в боковой панеле
+    // фильтр врачей по алфавиту
     const filterAlphabet = document.querySelectorAll('.doctor-list__alphabet a');
     filterAlphabet.forEach((el) => {
       el.addEventListener('click', (e) => {
@@ -230,6 +230,12 @@ document.addEventListener(
         });
         el.classList.toggle('is-active');
       });
+    });
+
+    // поиск врачей
+    const searchDoctor = document.querySelector('.doctor-list__search--input');
+    searchDoctor.addEventListener('blur', () => {
+      searchDoctor.classList.toggle('is-active');
     });
 
     // checkInputValue('input');

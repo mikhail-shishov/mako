@@ -263,6 +263,13 @@
   border-radius: 50px;
   display: inline-block;
   vertical-align: middle;
+
+  @media (max-width: 768px) {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 12px;
+  }
 }
 
 .breadcrumbs {
@@ -508,12 +515,9 @@
         }
       }
       &-search {
-        @media (max-width: 1280px) {
-          margin-bottom: 10px;
-        }
-
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
           width: 100%;
+          margin-bottom: 10px;
         }
       }
     }
@@ -609,6 +613,12 @@
         padding: 23px 48px;
         border: 1px solid $lightgrey6;
 
+        &.is-active {
+          + .doctor-list__search--list {
+            display: block;
+          }
+        }
+
         &::placeholder {
           color: $lightgrey3;
         }
@@ -623,8 +633,63 @@
           height: 51px;
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 768px) {
           width: 100%;
+        }
+      }
+      &--list {
+        background-color: white;
+        position: absolute;
+        display: none;
+        top: 100%;
+        z-index: 1;
+        padding: 24px 48px;
+        max-height: 240px;
+        box-shadow: 0px 0px 51px 0px rgba(26, 59, 159, 0.07);
+        border-radius: 16px;
+        @media (max-width: 1680px) {
+          padding: 20px;
+        }
+      }
+      &--item {
+        display: flex;
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: .3s;
+
+        &:hover {
+          opacity: .7;
+        }
+
+        &-text {
+          margin-left: 20px;
+        }
+        &-name {
+          color: $black;
+          margin: 0;
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
+        }
+        &-role {
+          color: $lightgrey3;
+          font-size: 14px;
+          margin: 6px 0 0;
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+        &-img {
+          background-color: $lightgrey4;
+          position: relative;
+          min-width: 72px;
+          height: 72px;
+          overflow: hidden;
+          border-radius: 8px;
+
+          img {
+            max-height: 100%;
+          }
         }
       }
     }
