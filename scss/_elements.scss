@@ -916,30 +916,41 @@
     box-sizing: border-box;
     border-radius: 3px;
     width: 100%;
+    min-width: 266px;
     cursor: pointer;
     position: relative;
     user-select: none;
     padding: 24px 68px 24px 47px;
 
+    &:after {
+      content: '';
+      position: absolute;
+      top: 45%;
+      right: 20px;
+      width: 8px;
+      height: 8px;
+      transform: translateY(-50%) rotate(45deg);
+      border-right: 1px solid $red;
+      border-bottom: 1px solid $red;
+      transition: 0.3s;
+    }
+
     &--name {
       position: relative;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-width: 200px;
+      white-space: nowrap;
+      width: 100%;
+      display: inline-block;
 
-      &:after {
-        content: '';
-        position: absolute;
-        top: 45%;
-        right: -19px;
-        width: 8px;
-        height: 8px;
-        transform: translateY(-50%) rotate(45deg);
-        border-right: 1px solid $red;
-        border-bottom: 1px solid $red;
-        transition: 0.3s;
+      @media (max-width: 1680px) {
+        max-width: 140px;
       }
     }
 
     &.toggle {
-      .select__button--name:after {
+      &:after {
         transform: translateY(0) rotate(225deg);
       }
     }
@@ -947,6 +958,7 @@
     @media (max-width: 1680px) {
       padding: 16px 40px 16px 23px;
       font-size: 14px;
+      min-width: 195px;
     }
   }
 

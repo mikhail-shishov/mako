@@ -194,7 +194,8 @@ document.addEventListener(
     let index = 1;
     select.forEach((a) => {
       a.addEventListener('click', (b) => {
-        document.querySelector('.select__button').classList.toggle('toggle');
+        b.target.classList.add('toggle');
+        b.target.parentElement.classList.add('toggle');
         const next = b.target.closest('div').nextElementSibling;
         next.classList.toggle('toggle');
         next.style.zIndex = index++;
@@ -202,10 +203,11 @@ document.addEventListener(
     });
     option.forEach((a) => {
       a.addEventListener('click', (b) => {
+        b.target.parentElement.parentElement.children[0].classList.remove('toggle');
         b.target.parentElement.classList.remove('toggle');
         const parent = b.target.closest('.select').children[0];
         parent.setAttribute('data-type', b.target.getAttribute('data-type'));
-        parent.innerText = b.target.getAttribute('data-type');
+        parent.children[0].innerText = b.target.getAttribute('data-type');
       });
     });
 
