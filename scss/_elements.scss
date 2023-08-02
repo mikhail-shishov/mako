@@ -223,6 +223,10 @@
     &::placeholder {
       color: $lightgrey3;
     }
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 
   &.is-active {
@@ -241,6 +245,7 @@
       @media (max-width: 1024px) {
         min-width: 280px;
         padding: 23px;
+        display: block;
       }
     }
     .search__button {
